@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
 
-import "../styles/init.scss"
-import Header from "./Header"
-import Footer from "./Footer"
+import "../styles/init.scss";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   const initialMode =
@@ -10,24 +10,24 @@ const Layout = ({ children }) => {
       ? localStorage === undefined
         ? "light"
         : localStorage.getItem("jlmode")
-      : "light"
-  const [mode, setMode] = useState(initialMode)
+      : "light";
+  const [mode, setMode] = useState(initialMode);
 
   useEffect(() => {
     if ((mode === null) | (mode === undefined)) {
-      setMode("light")
-      localStorage.setItem("jlmode", "light")
+      setMode("light");
+      localStorage.setItem("jlmode", "light");
     }
     if (mode === "dark" && typeof window !== "undefined") {
-      localStorage.setItem("jlmode", "dark")
-      document.body.classList.remove("light")
-      document.body.classList.add(mode)
+      localStorage.setItem("jlmode", "dark");
+      document.body.classList.remove("light");
+      document.body.classList.add(mode);
     } else if (mode === "light" && typeof window !== "undefined") {
-      localStorage.setItem("jlmode", "light")
-      document.body.classList.remove("dark")
-      document.body.classList.add(mode)
+      localStorage.setItem("jlmode", "light");
+      document.body.classList.remove("dark");
+      document.body.classList.add(mode);
     }
-  }, [mode])
+  }, [mode]);
 
   return (
     <div>
@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
       <div className="content">{children}</div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
