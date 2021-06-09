@@ -9,7 +9,7 @@
 
 ## 🚀 Quick start
 
-### new update
+### new update 1
 
 1.  **Create a Gatsby site.**
 
