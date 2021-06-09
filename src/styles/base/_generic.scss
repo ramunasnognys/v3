@@ -1,0 +1,131 @@
+/*
+ * | GENERIC | ----------------------------------------------------------------|
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--ff-root-font-size);
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--ff-secondary-font-family);
+  font-size: var(--ff-base-font-size);
+  // background-color: var(--clr-base-bg-color);
+  // color: var(--ff-base-font-color);
+  line-height: var(--ff-base-line-height);
+  text-rendering: optimizeLegibility;
+
+  overflow-x: none;
+  overscroll-behavior: hidden;
+}
+
+body.dark {
+  transition: all 1s;
+  background-color: var(--dark-background); 
+  color: var(--dark-color);
+
+  header {
+    background-color: var(--dark-background);
+  }
+}
+body.light {
+  transition: all 1s;
+  background-color: var(--clr-neutral-100);
+  color: var(--ff-base-font-color);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: var(--ff-headings-margin);
+  font-family: var(--ff-base-font-family);
+  line-height: var(--ff-headings-line-height);
+  font-weight: 700;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 6.3rem;
+  // line-height: 1.571;
+}
+
+h2 {
+  font-size: 4.9rem;
+  // line-height: 1.592;
+}
+
+h3 {
+  font-size: 3.9rem;
+  // line-height: 1.615;
+}
+
+h4 {
+  font-size: 3.1rem;
+  // line-height: 1.645;
+}
+
+h5 {
+  font-size: 2.4rem;
+  line-height: 1.708;
+}
+
+h6 {
+  font-size: 1.9rem;
+  // line-height: 1.789;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: var(--ff-base-line-height);
+}
+
+small,
+.text_small {
+  font-size: 0.8em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: ease-in-out 0.2s;
+}
+
+//mobile first
+.container {
+  border: var(--clr-base-border-color);
+  flex-grow: 1;
+  margin: 0 auto;
+  padding: 0 8px;
+  position: relative;
+  width: var(--ll-mobile-max-width);
+
+  
+  .wrapper {
+    margin-top: 6rem;
+  }
+
+  @include media(">tablet", "<=desktop") {
+    background: orange;
+    max-width: var(--ll-tablet-max-width);
+
+    padding: 0 16px;
+  }
+  @include media(">desktop", "<=1600px") {
+    background: var(--clr-primary-darker);
+    max-width: var(--ll-desktop-max-width);
+    padding: 0 32px;
+  }
+}
