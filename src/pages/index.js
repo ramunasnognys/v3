@@ -1,9 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/Layout"
-import Header from "../components/Header"
-import "../styles/init.scss"
-
+import React from "react";
+import { Link } from "gatsby";
+import Layout from "../components/Layout";
+import Header from "../components/Header";
+import "../styles/init.scss";
 
 const Home = () => {
   return (
@@ -35,9 +34,7 @@ const Home = () => {
         </div>
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-
-
-export default Home
+export default Home;
