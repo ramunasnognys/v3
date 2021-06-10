@@ -2,6 +2,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     `gatsby-plugin-layout`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

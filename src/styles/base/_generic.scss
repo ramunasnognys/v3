@@ -116,9 +116,10 @@ a {
   position: relative;
   width: var(--ll-mobile-max-width);
   height: 100%;
+  // cursor: url(./../../images/cursor.png);
 
   .wrapper {
-    margin-top: 10rem;
+    margin-top: 8rem;
   }
 
   @include media(">tablet", "<=desktop") {

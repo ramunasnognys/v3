@@ -37,7 +37,7 @@ header,
   }
   &__menu {
     display: flex;
-    gap: 1em;
+    gap: .5em;
     transition: all 1s;
   }
   &__modebtn {
@@ -45,10 +45,8 @@ header,
     display: flex;
   }
   &__modeicon {
-    height: 35px;
+    height: 25px;
     align-self: center;
-    // height: 24px;
-    // width: 24px;
   }
 
 }
