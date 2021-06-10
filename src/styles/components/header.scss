@@ -4,10 +4,9 @@ header,
   // backdrop-filter: blur(5px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   position: fixed;
+  opacity: 0.8;
   width: 100%;
-  
-  z-index: 4;
-  opacity: .5;
+  z-index: 1;
 
   &__wrapper {
     padding: 10px;
@@ -18,7 +17,7 @@ header,
     align-items: center;
     position: relative;
     z-index: 100;
-    opacity:initial;
+    opacity: initial;
   }
   &__logo {
     font-family: var(--ff-base-font-family);
@@ -51,4 +50,5 @@ header,
     // height: 24px;
     // width: 24px;
   }
+
 }
