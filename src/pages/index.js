@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 import Layout from "../layouts";
-import Header from "../components/Header";
 import "../styles/init.scss";
 
 const Home = () => {
   return (
-    <Layout>
       <section className="container hero">
         <div className="wrapper">
           <main>
@@ -33,7 +31,6 @@ const Home = () => {
           </p>
         </div>
       </section>
-    </Layout>
   );
 };
 

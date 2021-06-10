@@ -1,25 +1,25 @@
-import React from "react"
-import { Link } from "gatsby"
-import Navbar from "./Navbar"
-import Buttons from "./Buttons"
+import React from "react";
+import { Link } from "gatsby";
+import Navbar from "./Navbar";
+import Buttons from "./Buttons";
 //Icons
-import moon from "../assets/svg/moon.svg"
-import sun from "../assets/svg/sun.svg"
+import moon from "../assets/svg/moon.svg";
+import sun from "../assets/svg/sun.svg";
 import {
   Instagram,
   Facebook,
   Vimeo,
   Pink,
   Github,
-} from "../assets/svg/social-icons"
+} from "../assets/svg/social-icons";
 
-const Header = props => {
-  console.log()
+const Header = (props) => {
+  console.log();
   const handleMode = () => {
     return props.mode === "light"
       ? props.setMode("dark")
-      : props.setMode("light")
-  }
+      : props.setMode("light");
+  };
 
   return (
     <header className="header">
@@ -33,11 +33,11 @@ const Header = props => {
               </Link>
             </div>
             <div className="header__menu">
-              <a className="modebtn" onClick={handleMode}>
+              <a className="header__modebtn" onClick={handleMode}>
                 {props.mode === "light" ? (
-                  <img src={moon} alt="Light mode" />
+                  <img className="header__modeicon" src={moon} alt="Light mode" />
                 ) : (
-                  <img src={sun} alt="Dark mode" />
+                  <img className="header__modeicon" src={sun} alt="Dark mode" />
                 )}
               </a>
               <Buttons />
@@ -47,7 +47,7 @@ const Header = props => {
       </div>
       {/* <Hamburger state={state} /> */}
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

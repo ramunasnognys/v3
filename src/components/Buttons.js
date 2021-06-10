@@ -1,7 +1,12 @@
-import React from "react"
+import React from "react";
 
 function Buttons() {
-  return <button className="btn">Menu</button>
+  return (
+    <button className="menubtn">
+      <span></span>
+      <span></span>
+    </button>
+  );
 }
 
-export default Buttons
+export default Buttons;

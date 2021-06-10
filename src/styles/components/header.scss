@@ -3,10 +3,11 @@ header,
   background-color: var(--clr-white);
   // backdrop-filter: blur(5px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-  opacity: .8;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  
+  z-index: 4;
+  opacity: .5;
 
   &__wrapper {
     padding: 10px;
@@ -15,10 +16,13 @@ header,
   &__inner {
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 100;
+    opacity:initial;
   }
   &__logo {
     font-family: var(--ff-base-font-family);
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: -1px;
     font-weight: 900;
     flex: 1;
@@ -29,20 +33,22 @@ header,
       margin: 0 4px 0 2px;
       height: 5px;
       width: 5px;
-      color: var(--clr-sky-blue)
+      color: var(--clr-sky-blue);
     }
   }
   &__menu {
     display: flex;
     gap: 1em;
     transition: all 1s;
-   
-
-    .modebtn {
-      cursor: pointer;
-   
-  
-  
-    }
+  }
+  &__modebtn {
+    cursor: pointer;
+    display: flex;
+  }
+  &__modeicon {
+    height: 35px;
+    align-self: center;
+    // height: 24px;
+    // width: 24px;
   }
 }
