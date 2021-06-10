@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 import "../styles/init.scss";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Layout = ({ children }) => {
   const initialMode =
