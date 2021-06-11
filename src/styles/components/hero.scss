@@ -1,4 +1,27 @@
 .hero {
-    position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  &__inner {
+    margin: 4rem 0 7rem;
+    // background: lightblue;
+  }
+  p {
+    font-size: 2rem;
+  }
+  &__title {
+    margin-top: 1rem;
+  }
+  &__text {
+    font-weight: normal;
+  }
+  &__btn {
+    margin-top: 5rem;
+    width: 100%;
 
+    @include media(">tablet", "<=desktop") {
+      width: auto;
+    }
+  }
 }

@@ -5,32 +5,21 @@ import "../styles/init.scss";
 
 const Home = () => {
   return (
+    <main>
       <section className="container hero">
         <div className="wrapper">
-          <main>
-            <h1>New Starters</h1>
-          </main>
-          <h2>New Starters</h2>
-          <h3>New Starters</h3>
-          <h4>New Starters</h4>
-          <h5>New Starters</h5>
-          <h6>New Starters</h6>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde
-            architecto, repellendus ut nulla accusamus obcaecati a praesentium
-            eius tempore reiciendis nemo magnam temporibus molestiae quos. Unde,
-            facilis facere debitis molestias, officiis libero blanditiis culpa,
-            explicabo incidunt ipsam eum voluptates architecto.
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde
-            architecto, repellendus ut nulla accusamus obcaecati a praesentium
-            eius tempore reiciendis nemo magnam temporibus molestiae quos. Unde,
-            facilis facere debitis molestias, officiis libero blanditiis culpa,
-            explicabo incidunt ipsam eum voluptates architecto.
-          </p>
+          <div className="hero__inner">
+            <p>Hi, my name is</p>
+            <h2 className="hero__title"> Ramūnas Nognys </h2>
+            <p className="hero__text">
+              I‘m a front-end web developer from Vilnius currently working with
+              ReactJS.
+            </p>
+            <button className="btn hero__btn"> Contact Me</button>
+          </div>
         </div>
       </section>
+    </main>
   );
 };
 

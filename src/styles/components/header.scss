@@ -4,9 +4,9 @@ header,
   // backdrop-filter: blur(5px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   position: fixed;
-  opacity: 0.8;
   width: 100%;
   z-index: 1;
+  background: rgba(255, 165, 0, 0.5);
 
   &__wrapper {
     padding: 10px;
@@ -15,9 +15,6 @@ header,
   &__inner {
     display: flex;
     align-items: center;
-    position: relative;
-    z-index: 100;
-    opacity: initial;
   }
   &__logo {
     font-family: var(--ff-base-font-family);
@@ -37,16 +34,24 @@ header,
   }
   &__menu {
     display: flex;
-    gap: .5em;
+    gap: 0.5em;
     transition: all 1s;
   }
   &__modebtn {
     cursor: pointer;
     display: flex;
   }
+  &__menubtn {
+    span {
+      background: var(--ff-base-font-color);
+      width: 30px;
+      height: 5px;
+      display: block;
+      margin: 8px;
+    }
+  }
   &__modeicon {
     height: 25px;
     align-self: center;
   }
-
 }

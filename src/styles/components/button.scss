@@ -11,18 +11,30 @@ button {
   // border-radius: var(--bb-button-border-radius);
   transform-origin: center;
   border: none;
-  padding: .5rem;
+  padding: 0.5rem;
   background: none;
   outline: none;
+  cursor: pointer;
 }
 
-.menubtn {
+button.btn {
+  display: block;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  border-radius: 6px;
+  background-size: 300% 300%;
+  padding: 1em 3em;
+  background-image: linear-gradient(
+    to right,
+    #895cf2 0%,
+    #ffabf4 50%,
+    #895cf2 100%
+  );
+  transition: 0.5s;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 
-  span {
-    background: var(--ff-base-font-color);
-    width: 30px;
-    height: 5px;
-    display: block;
-    margin: 8px;
+  &:hover {
+    background-position: right center;
   }
 }
