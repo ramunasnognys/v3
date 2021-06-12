@@ -9,6 +9,7 @@
   bottom: 0;
   z-index: 9;
   text-align: center;
+  overflow: hidden;
 
   .menu-secondary-background-color {
     background: var(--clr-black);
@@ -56,6 +57,9 @@
       display: block;
       font-weight: 600;
       letter-spacing: 2px;
+      .download {
+       
+      }
     }
     .menu-email {
       text-transform: uppercase;
@@ -73,3 +77,4 @@
   height: 24px;
   fill: var(--dim-black);
 }
+
