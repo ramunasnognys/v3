@@ -34,12 +34,11 @@
 
     .menu-text {
       font-size: 1.8rem;
-      // font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 4px;
     }
     .menu-links {
-      margin: 5rem 0;
+      margin: 0.5rem 0 7rem;
     }
     .menu-social-icons {
       .social-icon {
@@ -49,19 +48,21 @@
         margin: 0;
       }
     }
-    .menu-email {
-      text-transform: uppercase;
-      font-size: var(--ff-small-font-size);
-      font-weight: 100;
-    }
 
     .menu-resume {
       font-size: 2.4rem;
       font-weight: 400;
-      margin: 5rem;
+      margin-top: 4rem;
       display: block;
       font-weight: 600;
       letter-spacing: 2px;
+    }
+    .menu-email {
+      text-transform: uppercase;
+      font-size: var(--ff-small-font-size);
+      font-weight: 100;
+      margin-top: 5rem;
+      display: block;
     }
   }
 }
@@ -70,5 +71,5 @@
   font-size: 2rem;
   width: 24px;
   height: 24px;
-  fill: var(--clr-secondary-normal);
+  fill: var(--dim-black);
 }

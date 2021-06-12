@@ -23,6 +23,7 @@
 
   --clr-white: #ffffff;
   --clr-black: #000000;
+  --dim-black: #252746;
 
   --clr-red: hsl(0, 100%, 52%);
   --clr-sky-blue: hsl(200, 100%, 80%);
@@ -68,14 +69,14 @@
 
   --ff-root-font-size: 62.5%;
   --ff-base-font-size: 1.6rem;
-  --ff-small-font-size: 1.4rem;
+  --ff-small-font-size: 1.2rem;
 
   --ff-base-line-height: 1.659;
 
   --ff-headings-line-height: 1.15;
   --ff-headings-margin: 2.75rem 0 1.05rem;
 
-  --ff-base-font-color: var(--clr-secondary-darker);
+  --ff-base-font-color: var(--dim-black);
   --ff-link-font-color: var(---clr-sky-blue);
 
   --ff-button-font-size: 1em;
