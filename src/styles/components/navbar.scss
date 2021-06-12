@@ -1,0 +1,11 @@
+.navbar {
+  .navbar__links {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--ff-menu-links-font-size);
+    font-weight: 900;
+    line-height: 1.4;
+  }
+}
+
+

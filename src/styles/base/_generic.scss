@@ -20,7 +20,7 @@ body {
   font-family: var(--ff-secondary-font-family);
   font-size: var(--ff-base-font-size);
   // background-color: var(--clr-base-bg-color);
-  // color: var(--ff-base-font-color);
+  color: var(--ff-base-font-color);
   line-height: var(--ff-base-line-height);
   text-rendering: optimizeLegibility;
 
@@ -33,9 +33,11 @@ body.dark {
   background-color: var(--dark-background);
   color: var(--dark-color);
 
-  header {
+  header,
+  .header {
     background-color: var(--dark-background);
-    .hamburger-menu {
+
+    &__menubtn {
       span {
         background: var(--clr-white);
       }

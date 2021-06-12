@@ -6,7 +6,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Source Code Pro`, `Poppins\:300,400,400i,700`],
+        fonts: [`Source Code Pro`, `Poppins\:300,400,400i,600,700,900`],
         display: "swap",
       },
     },

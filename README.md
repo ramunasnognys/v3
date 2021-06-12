@@ -9,7 +9,7 @@
 
 ## 🚀 Quick start
 
-### new update 2
+### new update Hero Style
 
 1.  **Create a Gatsby site.**
 

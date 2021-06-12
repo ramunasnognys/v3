@@ -27,7 +27,7 @@
   --clr-red: hsl(0, 100%, 52%);
   --clr-sky-blue: hsl(200, 100%, 80%);
 
-  --clr-neutral-100: ##f7fafc;
+  --clr-neutral-100: #f7fafc;
   --clr-neutral-200: #edf2f7;
   --clr-neutral-300: #e2e8f0;
   --clr-neutral-400: #cbd5e0;
@@ -79,6 +79,7 @@
   --ff-link-font-color: var(---clr-sky-blue);
 
   --ff-button-font-size: 1em;
+  --ff-menu-links-font-size: 4.8rem;
 
   // BB | BUTTONS
   --bb-button-height: 35px;
