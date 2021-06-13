@@ -42,12 +42,12 @@ export const Twitter = () => (
 //Arrow Icon for ref
 
 export const Download = () => (
-  <svg
+  <svg className="download"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 485 485"
     width="24"
     height="24"
-    stroke="black"
+    stroke="white"
     stroke-width="40"
     stroke-linecap="round"
   >

@@ -40,13 +40,10 @@ function Hamburger() {
                 <Twitter />
               </a>
             </div>
-            <a href="#" className="menu-resume">
-              <Download />
-              <span>Resume</span>
-            </a>
-            <a href="#" className="menu-email">
-              ramunas.nognys@gmail.com
-            </a>
+
+            <button className="btn menu-resume">
+              <Download className="download" /> Resume
+            </button>
           </div>
         </div>
       </div>
