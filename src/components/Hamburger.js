@@ -42,7 +42,7 @@ function Hamburger() {
             </div>
 
             <button className="btn menu-resume">
-              <Download className="download" /> Resume
+               Resume
             </button>
           </div>
         </div>

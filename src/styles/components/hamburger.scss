@@ -35,18 +35,30 @@
       padding-top: 4rem;
       display: flex;
       flex-direction: column;
+
+      @include media(">tablet") {
+        padding-top: 10rem;
+      }
     }
 
     .menu-text {
       font-size: 1.8rem;
       text-transform: uppercase;
       letter-spacing: 4px;
-
     }
     .menu-links {
       margin: 0.5rem 0 7rem;
+      a {
+        
+        @include media(">tablet") {
+          font-size: 6rem;
+        }
+      }
     }
     .menu-social-icons {
+      @include media(">tablet") {
+        margin-top: 6rem;
+      }
       .social-icon {
         margin-right: 1em;
       }
@@ -63,8 +75,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @include media(">tablet") {
+        margin-top: 6rem;
+      }
       .download {
-        // margin: 5px;
         margin-right: 5px;
       }
     }
@@ -82,4 +96,22 @@
   width: 24px;
   height: 24px;
   fill: var(--dim-black);
+}
+.icon:hover {
+  opacity: 0.8;
+  
+  transition: background 0.2s, color 0.2s;
+  animation: spinAround 2s linear infinite;
+}
+.icon:hover:before {
+  animation: spinAround 2s linear infinite;
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
