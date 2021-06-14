@@ -23,7 +23,7 @@ export default function Navbar() {
             Home
           </Link>
         </div>
-        <Link data-text="About" className="fade-in-text__link" to="/about">
+        <Link data-text="About" className="fade-in-text__link" to="/about/">
           About
         </Link>
         <Link
@@ -34,11 +34,11 @@ export default function Navbar() {
           Projects
         </Link>
         <Link
-          data-text="Contact Me"
+          data-text="Contact"
           className="fade-in-text__link"
           to="/contactMe"
         >
-          Contact Me
+          Contact
         </Link>
       </div>
     </nav>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "gatsby";
 import Navbar from "./Navbar";
 
@@ -11,9 +11,27 @@ import {
   Download,
 } from "../assets/svg/social-icons";
 
-function Hamburger() {
+function Hamburger({ state }) {
+  // const [isHidden, showNavigation] = useState(true);
+  let menu = useRef(null);
+
+  useEffect(() => {
+    if (state.clicked === false) {
+      // close our menu
+      menu.style.display = "none";
+      console.log("CLOSED OPENED");
+    } else if (
+      state.clicked === true ||
+      (state.clicked === true && state.initial === null)
+    ) {
+      // open our menu
+      console.log("MENU OPENED");
+      menu.style.display = "block";
+    }
+  });
+
   return (
-    <div className="hamburger-menu">
+    <div ref={(el) => (menu = el)} className="hamburger-menu">
       <div className="menu-secondary-background-color"></div>
       <div className="menu-layer">
         <div className="menu-city-background"></div>
@@ -41,9 +59,7 @@ function Hamburger() {
               </a>
             </div>
 
-            <button className="btn menu-resume">
-               Resume
-            </button>
+            <button className="btn menu-resume">Resume</button>
           </div>
         </div>
       </div>

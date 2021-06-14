@@ -9,8 +9,6 @@
 }
 
 .fade-in-text {
-  // position: relative;
-
   &__link {
     position: relative;
 
@@ -30,8 +28,15 @@
       opacity: 0;
       transition: all 0.2s linear;
     }
-
+    &:hover {
+      --clr-shadow: var(--dim-black);
+      color: #895cf2;
+      text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px,
+        #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+    }
     &:hover:before {
+      color: var(--clr-white);
+
       letter-spacing: initial;
       opacity: 0.5;
       z-index: 2;

@@ -1,5 +1,5 @@
 .hamburger-menu {
-  // display: none;
+  display: none;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -10,6 +10,7 @@
   z-index: 9;
   text-align: center;
   overflow: hidden;
+  color: var(--dim-black);
 
   .menu-secondary-background-color {
     background: var(--clr-black);
@@ -37,7 +38,7 @@
       flex-direction: column;
 
       @include media(">tablet") {
-        padding-top: 10rem;
+        padding-top: 4rem;
       }
     }
 
@@ -57,7 +58,7 @@
     }
     .menu-social-icons {
       @include media(">tablet") {
-        margin-top: 6rem;
+        margin-top: 1rem;
       }
       .social-icon {
         margin-right: 1em;

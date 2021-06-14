@@ -33,6 +33,10 @@ body.dark {
   background-color: var(--dark-background);
   color: var(--dark-color);
 
+  .fade-in-text {
+    color: var(--dim-black);
+  }
+
   header,
   .header {
     background-color: var(--dark-background);
