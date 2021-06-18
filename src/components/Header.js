@@ -1,56 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "gatsby";
+import { useLocation } from "@reach/router";
+import DarkMode from "../components/DarkMode";
 
-import Hamburger from "./Hamburger";
+import { Close } from "../assets/svg/social-icons";
 
 //Icons
 import moon from "../assets/svg/moon.svg";
 import sun from "../assets/svg/sun.svg";
-const Header = (props) => {
-  const [state, setState] = useState({
-    initial: false,
-    clicked: null,
-    menuName: "Menu",
-  });
 
-  // State of our button
-  const [disabled, setDisabled] = useState(false);
-  const handleMode = () => {
-    return props.mode === "light"
-      ? props.setMode("dark")
-      : props.setMode("light");
-  };
+const Header = ({ setMenuState, menuState }) => {
+  const location = useLocation();
 
-  const handleModeMenu = () => {
-    disableMenu();
-
-    if (state.initial === false) {
-      setState({
-        initial: null,
-        clicked: true,
-        menuName: "Close",
-      });
-    } else if (state.clicked === true) {
-      setState({
-        clicked: !state.clicked,
-        menuName: "Menu",
-      });
-    } else if (state.clicked === false) {
-      setState({
-        clicked: !state.clicked,
-        menuName: "Close",
-      });
-    }
-  };
-
-  //Determine if out menu button should be disabled
-  const disableMenu = () => {
-    setDisabled(!disabled);
-    setTimeout(() => {
-      setDisabled(false);
-    }, 1200);
-    console.log("test");
-  };
+  useEffect(() => {
+    setMenuState(false);
+  }, [location]);
 
   return (
     <header className="header">
@@ -63,20 +27,9 @@ const Header = (props) => {
               </Link>
             </div>
             <div className="header__menu">
-              <a className="header__modebtn" onClick={handleMode}>
-                {props.mode === "light" ? (
-                  <img
-                    className="header__modeicon"
-                    src={moon}
-                    alt="Light mode"
-                  />
-                ) : (
-                  <img className="header__modeicon" src={sun} alt="Dark mode" />
-                )}
-              </a>
+              <DarkMode />
               <button
-                disabled={disabled}
-                onClick={handleModeMenu}
+                onClick={() => setMenuState(!menuState)}
                 className="header__menubtn"
               >
                 <span></span>
@@ -86,7 +39,6 @@ const Header = (props) => {
           </div>
         </div>
       </div>
-      <Hamburger state={state} />
     </header>
   );
 };

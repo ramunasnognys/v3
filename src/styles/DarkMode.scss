@@ -1,0 +1,52 @@
+body {
+  //theme dark
+  &.dark {
+    transition: all 1s;
+    background-color: var(--dark-background);
+    color: var(--dark-color);
+
+    .fade-in-text {
+      color: var(--dim-black);
+    }
+
+    header,
+    .header {
+      background-color: var(--dark-background);
+
+      &__menubtn {
+        span {
+          background: var(--clr-white);
+        }
+      }
+    }
+  }
+  // theme light
+  &.light {
+    transition: all 1s;
+    background-color: var(--clr-neutral-100);
+    color: var(--ff-base-font-color);
+  }
+}
+
+#darkMode {
+  background: transparent url("../moon.png") no-repeat center;
+  background-size: 30px 30px;
+  width: 4.5rem;
+  height: 4.5rem;
+  filter: grayscale(100%);
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    filter: none;
+    background-color: black;
+    cursor: pointer;
+  }
+
+  &.clicked {
+    filter: none !important;
+    background-color: rgb(21, 23, 126);
+  }
+}

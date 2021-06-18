@@ -28,32 +28,6 @@ body {
   overscroll-behavior: hidden;
 }
 
-body.dark {
-  transition: all 1s;
-  background-color: var(--dark-background);
-  color: var(--dark-color);
-
-  .fade-in-text {
-    color: var(--dim-black);
-  }
-
-  header,
-  .header {
-    background-color: var(--dark-background);
-
-    &__menubtn {
-      span {
-        background: var(--clr-white);
-      }
-    }
-  }
-}
-body.light {
-  transition: all 1s;
-  background-color: var(--clr-neutral-100);
-  color: var(--ff-base-font-color);
-}
-
 h1,
 h2,
 h3,
@@ -113,6 +87,20 @@ a {
   transition: ease-in-out 0.2s;
 }
 
+// body.light {
+//   --background-color: var(--white);
+//   --text-color: var(--blue);
+//   --font-weight: 400;
+//   --image: url("../day.jpg");
+// }
+
+// body.dark {
+//   --background-color: var(--blue);
+//   --text-color: var(--white);
+//   --font-weight: 500;
+//   --image: url("../night.jpg");
+// }
+
 //mobile first
 .container {
   border: var(--clr-base-border-color);
@@ -139,4 +127,15 @@ a {
     max-width: var(--ll-desktop-max-width);
     padding: 0 32px;
   }
+}
+
+#image {
+  width: 100%;
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image 0.7s ease-in-out;
+  background-image: var(--image);
 }

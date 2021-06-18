@@ -2,9 +2,12 @@
 @import "mixins";
 @import "base";
 
+@import "./DarkMode";
+
 // | Component styles
 @import "./components/header";
 @import "./components/hero";
 @import "./components/button";
 @import "./components/hamburger";
 @import "./components/navbar";
+

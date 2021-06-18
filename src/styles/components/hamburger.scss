@@ -1,5 +1,5 @@
 .hamburger-menu {
-  display: none;
+  // display: none;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -31,6 +31,23 @@
     flex-direction: column;
     justify-items: center;
 
+
+    .close {
+      z-index: 1000;
+      position: absolute;
+      right: 3rem;
+      display: inline-block;
+      cursor: pointer;
+
+
+      @include media(">desktop", "<=1600px") {
+        // background: var(--clr-primary-darker);
+        max-width: var(--ll-desktop-max-width);
+        padding: 1.5rem 17rem;
+      }
+
+    }
+
     .wrapper {
       position: relative;
       padding-top: 4rem;
@@ -50,7 +67,6 @@
     .menu-links {
       margin: 0.5rem 0 7rem;
       a {
-        
         @include media(">tablet") {
           font-size: 6rem;
         }
@@ -100,7 +116,7 @@
 }
 .icon:hover {
   opacity: 0.8;
-  
+
   transition: background 0.2s, color 0.2s;
   animation: spinAround 2s linear infinite;
 }

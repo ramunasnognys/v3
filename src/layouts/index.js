@@ -1,37 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import "../styles/init.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Menu from "../components/Menu";
+
 
 const Layout = ({ children }) => {
-  const initialMode =
-    typeof window !== "undefined"
-      ? localStorage === undefined
-        ? "light"
-        : localStorage.getItem("jlmode")
-      : "light";
-  const [mode, setMode] = useState(initialMode);
+  // State of our menu
+  const [menuState, setMenuState] = useState(false);
 
+  // Locking the body from scrolling when menu is opened
   useEffect(() => {
-    if ((mode === null) | (mode === undefined)) {
-      setMode("light");
-      localStorage.setItem("jlmode", "light");
-    }
-    if (mode === "dark" && typeof window !== "undefined") {
-      localStorage.setItem("jlmode", "dark");
-      document.body.classList.remove("light");
-      document.body.classList.add(mode);
-    } else if (mode === "light" && typeof window !== "undefined") {
-      localStorage.setItem("jlmode", "light");
-      document.body.classList.remove("dark");
-      document.body.classList.add(mode);
-    }
-  }, [mode]);
+    menuState
+      ? document.body.classList.add("body-lock")
+      : document.body.classList.remove("body-lock");
+  }, [menuState]);
 
   return (
     <div>
-      <Header mode={mode} setMode={setMode} />
+      <Header setMenuState={setMenuState} menuState={menuState} />
+      <Menu menuState={menuState} setMenuState={setMenuState} />
+
       <div className="content">{children}</div>
       <Footer />
     </div>
