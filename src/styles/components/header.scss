@@ -36,7 +36,8 @@ header,
   }
   &__menu {
     display: flex;
-    gap: 3rem;
+
+    gap: 1rem;
     transition: all 1s;
     cursor: pointer;
   }
@@ -59,4 +60,8 @@ header,
     height: 25px;
     align-self: center;
   }
+}
+
+.md-toggle {
+  background: tomato;
 }

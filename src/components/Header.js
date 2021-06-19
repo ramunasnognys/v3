@@ -27,6 +27,7 @@ const Header = ({ setMenuState, menuState }) => {
               </Link>
             </div>
             <div className="header__menu">
+              
               <DarkMode />
               <button
                 onClick={() => setMenuState(!menuState)}

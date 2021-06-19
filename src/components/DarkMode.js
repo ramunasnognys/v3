@@ -4,8 +4,6 @@ import Helmet from "react-helmet";
 import moon from "../assets/svg/moon.svg";
 import sun from "../assets/svg/sun.svg";
 
-// import "../styles/dark-mode-switch.scss";
-
 const themeType = {
   dark: "dark",
   light: "light",
@@ -43,9 +41,9 @@ const DarkMode = () => {
         onKeyDown={toggleMode}
       >
         {mode === themeType.light ? (
-          <img src={moon} alt="dark mode" />
+          <img src={moon} className="icon icon-moon" alt="dark mode" />
         ) : (
-          <img src={sun} alt="light mode" />
+          <img src={sun}  className="icon icon-sun" alt="light mode" />
         )}
       </button>
     </Fragment>

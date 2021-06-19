@@ -20,22 +20,22 @@ const Menu = ({ menuState, setMenuState }) => {
         <div className="hamburger-menu">
           <div className="menu-secondary-background-color"></div>
           <div className="menu-layer">
-            <div onClick={() => setMenuState(!menuState)} className="close">
-              <Close />
-            </div>
-            <div className="menu-city-background"></div>
-            <div className="container">
-              <div className="wrapper">
-                <span className="menu-text">Menu</span>
-                <div className="menu-links">
-                  <Navbar />
+            <div className="wrapper">
+              <div className="container">
+                <div onClick={() => setMenuState(!menuState)} className="close">
+                  <Close />
                 </div>
-                <div className="menu-social-icons">
-                  <IconList />
-                </div>
-
-                <button className="btn menu-resume">Resume</button>
               </div>
+              <div className="menu-city-background"></div>
+              <span className="menu-text">Menu</span>
+              <div className="menu-links">
+                <Navbar />
+              </div>
+              <div className="menu-social-icons">
+                <IconList />
+              </div>
+
+              <button className="btn menu-resume">Resume</button>
             </div>
           </div>
         </div>

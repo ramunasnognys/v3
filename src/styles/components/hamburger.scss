@@ -31,35 +31,31 @@
     flex-direction: column;
     justify-items: center;
 
-
     .close {
       z-index: 1000;
       position: absolute;
-      right: 3rem;
-      display: inline-block;
+      right: 0;
+      display: inline-flex;
       cursor: pointer;
+      margin: 1.5rem 2.8rem;
 
-
-      @include media(">desktop", "<=1600px") {
-        // background: var(--clr-primary-darker);
-        max-width: var(--ll-desktop-max-width);
-        padding: 1.5rem 17rem;
+      @include media(">tablet", "<=desktop") {
+        margin: 1.5rem 3.5rem;
       }
 
+      @include media(">desktop", "<=1600px") {
+        margin: 1.5rem 5.3rem;
+      }
     }
 
     .wrapper {
       position: relative;
-      padding-top: 4rem;
       display: flex;
       flex-direction: column;
-
-      @include media(">tablet") {
-        padding-top: 4rem;
-      }
     }
 
     .menu-text {
+      margin-top: 8rem;
       font-size: 1.8rem;
       text-transform: uppercase;
       letter-spacing: 4px;
@@ -109,26 +105,22 @@
 }
 
 .icon {
-  font-size: 2rem;
   width: 24px;
   height: 24px;
   fill: var(--dim-black);
+  display: block;
 }
-.icon:hover {
-  opacity: 0.8;
+.social-icon {
+  display: inline-flex;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin: 0.2em;
 
-  transition: background 0.2s, color 0.2s;
-  animation: spinAround 2s linear infinite;
-}
-.icon:hover:before {
-  animation: spinAround 2s linear infinite;
-}
-
-@keyframes spinAround {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  &:hover {
+    opacity: 0.8;
+    background: var(--clr-purple);
+    transition: all 0.3s ease-in-out;
   }
 }
