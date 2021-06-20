@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
 export default function Navbar() {
+  let line1 = useRef(null);
+  let line2 = useRef(null);
+  let line3 = useRef(null);
+
   const data = useStaticQuery(graphql`
     {
       site {
